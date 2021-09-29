@@ -2,26 +2,23 @@ import { Column, Entity, ManyToOne, OneToMany, PrimaryGeneratedColumn} from "typ
 import { Admin } from "./admin.entity";
 import { Data } from "./data.entity";
 
-@Entity('videodata')
-export class Videodata {
+@Entity('quiz')
+export class Quiz {
     @PrimaryGeneratedColumn()
     id: number;
 
-    @Column({ nullable: true})
-    vname: string;
 
     @Column({ nullable: true})
-    videoname: string;
+    questionText: string;
 
+    // @Column({ nullable: true})
+    // answerOptions: JSON;
+
+    @Column ({ name: "answerOptions", nullable: true , type: "json"})
+    answerOptions?: JSON;
+
+    
     @Column({ nullable: true})
-    desc: string;
-
-    @Column({ nullable: true})
-    mark: number;
-
-    @Column({ nullable: true})
-    cid: number;
-
-
+    adminId: number;
 
 }

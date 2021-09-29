@@ -12,8 +12,11 @@ export class VideoDataService{
         const video: Videodata = new Videodata();
        // emp.id = createEmployeeRequest.id
        video.videoname = videodata.videoname
+       video.vname = videodata.vname
        video.mark = videodata.mark
        video.desc = videodata.desc
+       video.cid = videodata.cid
+
         //console.log("name",emp.name)
         await this.videorepository.save(video)
 
@@ -27,6 +30,10 @@ export class VideoDataService{
         const empdto = new videodataDTO();
         empdto.videoname = emp.videoname
         empdto.mark = emp.mark
+        empdto.vname = emp.vname
+        empdto.desc = emp.desc
+        empdto.cid = emp.cid
+
 
         return empdto
     }

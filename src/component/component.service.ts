@@ -181,6 +181,7 @@ export class ComponentService {
         const emp: Draftdata = new Draftdata();
         emp.data = body.data
         emp.adminid=body.adminid
+        emp.cid=body.cid
         var result =await this.draftRepository.save(emp)
        return result
 

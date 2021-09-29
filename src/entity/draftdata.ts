@@ -14,5 +14,8 @@ export class Draftdata {
     @Column({ nullable: true})
     adminid: number;
 
+    @Column({ nullable: true})
+    cid: number;
+
 
 }
